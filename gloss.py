@@ -9,6 +9,7 @@ The glossary data is imported from `glossary.glossary_data` and `glossary.glossa
 
 import click
 from rich.console import Console
+from rich.markdown import Markdown
 from rich.text import Text
 import emoji
 from glossary.glossary_data import glossary
@@ -18,7 +19,7 @@ console = Console()
 
 
 def format_term(term, definition):
-    icon = emoji.emojize(definition.get("icon", ""), use_aliases=True)
+    icon = emoji.emojize(definition.get("icon", ""))
     color = definition.get("color", "white")
     description = definition.get("description", definition)
     alt = ", ".join(definition.get("alt", []))
@@ -135,7 +136,7 @@ def show(term):
 @cli.command()
 def help():
     """Show the help menu."""
-    console.print(help_content, style="green")
+    console.print(Markdown(help_content))
 
 
 if __name__ == "__main__":
