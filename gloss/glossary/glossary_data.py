@@ -82,27 +82,27 @@ glossary = {
     "511": "Network Authentication Required: The client needs to authenticate to gain network access.",
     "INFO": {
         "description": "Informational messages that highlight the progress of the application.",
-        "icon": ":information_source:",
+        "icon": "ℹ️",
         "color": "cyan",
     },
     "WARN": {
-        "description": "Indication of potential issues. (See also WARNING, TODO, FIXME, XXX)",
-        "icon": ":warning:",
+        "description": "Indication of potential issues. (See also WARNING, XXX)",
+        "icon": "⚠️",
         "color": "yellow",
     },
     "ERROR": {
         "description": "Error events that might still allow the application to continue running.",
-        "icon": ":x:",
+        "icon": "❌",
         "color": "red",
     },
     "DEBUG": {
         "description": "Fine-grained informational events that are most useful to debug an application.",
-        "icon": ":mag:",
+        "icon": "🔍",
         "color": "blue",
     },
     "FATAL": {
         "description": "Severe error events that will presumably lead the application to abort.",
-        "icon": ":skull:",
+        "icon": "💀",
         "color": "red",
     },
 }
