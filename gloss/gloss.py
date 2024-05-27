@@ -19,10 +19,16 @@ console = Console()
 
 
 def format_term(term, definition):
-    icon = emoji.emojize(definition.get("icon", ""))
-    color = definition.get("color", "white")
-    description = definition.get("description", definition)
-    alt = ", ".join(definition.get("alt", []))
+    if isinstance(definition, dict):
+        icon = emoji.emojize(definition.get("icon", ""))
+        color = definition.get("color", "white")
+        description = definition.get("description", "")
+        alt = ", ".join(definition.get("alt", []))
+    else:
+        icon = ""
+        color = "white"
+        description = definition
+        alt = ""
 
     term_text = Text(term, style=color)
     icon_text = Text(icon)
@@ -106,15 +112,19 @@ def list(category):
         ],
         "log": ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"],
     }
-    terms = categories.get(category.upper(), [])
+    category = category.upper()
+    terms = categories.get(category, [])
     if not terms:
         console.print(f"No category found for '{category}'", style="bold red")
+        return
+
     all_terms = []
     for term in terms:
         definition = glossary.get(term, {})
         all_terms.append(term)
         if isinstance(definition, dict) and "alt" in definition:
             all_terms.extend(definition["alt"])
+
     for term in all_terms:
         definition = glossary.get(term, {})
         formatted_text = format_term(term, definition)
