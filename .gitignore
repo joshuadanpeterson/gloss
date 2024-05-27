@@ -2,3 +2,4 @@
 gloss-env/
 gloss.egg-info/
 gloss/__pycache__/*
+gloss/glossary/__pycache__/*
