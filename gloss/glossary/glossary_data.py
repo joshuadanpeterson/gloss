@@ -3,52 +3,51 @@ glossary/glossary_data.py
 This contains a dictionary of terms and their descriptions.
 """
 
-
 glossary = {
     "FIX": {
         "description": "Bug that needs to be fixed.",
-        "icon": " ",
+        "icon": ":bug:",
         "color": "red",
-        "alt": ["FIXME", "BUG", "FIXIT", "ISSUE"]
+        "alt": ["FIXME", "BUG", "FIXIT", "ISSUE"],
     },
     "TODO": {
         "description": "General task to be completed.",
-        "icon": " ",
-        "color": "blue"
+        "icon": ":white_check_mark:",
+        "color": "blue",
     },
     "HACK": {
         "description": "Temporary workaround that should be improved.",
-        "icon": " ",
-        "color": "yellow"
+        "icon": ":zap:",
+        "color": "yellow",
     },
     "WARN": {
         "description": "Indication of potential issues.",
-        "icon": " ",
+        "icon": ":warning:",
         "color": "yellow",
-        "alt": ["WARNING", "XXX"]
+        "alt": ["WARNING", "XXX"],
     },
     "PERF": {
         "description": "Performance improvements.",
-        "icon": " ",
+        "icon": ":rocket:",
         "color": "green",
-        "alt": ["OPTIM", "PERFORMANCE", "OPTIMIZE"]
+        "alt": ["OPTIM", "PERFORMANCE", "OPTIMIZE"],
     },
     "NOTE": {
         "description": "Important comment or explanation.",
-        "icon": " ",
+        "icon": ":memo:",
         "color": "cyan",
-        "alt": ["INFO"]
+        "alt": ["INFO"],
     },
     "TEST": {
         "description": "Test-related annotations.",
-        "icon": "⏲ ",
+        "icon": ":hourglass_flowing_sand:",
         "color": "magenta",
-        "alt": ["TESTING", "PASSED", "FAILED"]
+        "alt": ["TESTING", "PASSED", "FAILED"],
     },
     "DEPRECATED": {
         "description": "Marks code that is outdated and will be removed in the future.",
-        "icon": "⚠️ ",
-        "color": "grey"
+        "icon": ":warning:",
+        "color": "grey",
     },
     "feat": "A new feature.",
     "fix": "A bug fix.",
@@ -84,5 +83,31 @@ glossary = {
     "507": "Insufficient Storage: The server is unable to store the representation needed to complete the request.",
     "508": "Loop Detected: The server detected an infinite loop while processing the request.",
     "510": "Not Extended: Further extensions to the request are required for the server to fulfill it.",
-    "511": "Network Authentication Required: The client needs to authenticate to gain network access."
+    "511": "Network Authentication Required: The client needs to authenticate to gain network access.",
+    "INFO": {
+        "description": "Informational messages that highlight the progress of the application.",
+        "icon": ":information_source:",
+        "color": "cyan",
+    },
+    "WARN": {
+        "description": "Indication of potential issues.",
+        "icon": ":warning:",
+        "color": "yellow",
+        "alt": ["WARNING", "XXX"],
+    },
+    "ERROR": {
+        "description": "Error events that might still allow the application to continue running.",
+        "icon": ":x:",
+        "color": "red",
+    },
+    "DEBUG": {
+        "description": "Fine-grained informational events that are most useful to debug an application.",
+        "icon": ":mag:",
+        "color": "blue",
+    },
+    "FATAL": {
+        "description": "Severe error events that will presumably lead the application to abort.",
+        "icon": ":skull:",
+        "color": "red",
+    },
 }
