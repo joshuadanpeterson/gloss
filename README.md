@@ -1,5 +1,7 @@
 # Gloss
 
+### Currently in development
+
 Gloss is a Command Line Interface (CLI) tool that acts as a glossary for developers. It helps you quickly look up definitions for various programming terms, HTTP status codes, log levels, and more.
 
 ## Features
@@ -11,7 +13,7 @@ Gloss is a Command Line Interface (CLI) tool that acts as a glossary for develop
 
 ## Installation
 
-You can install Gloss via pip. Make sure you have Python 3.6 or higher installed.
+You will soon be able to install Gloss via pip. Make sure you have Python 3.6 or higher installed.
 
 ```sh
 pip install gloss
