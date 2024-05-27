@@ -62,7 +62,7 @@ def search(term):
 def list(category):
     """List all terms in a specific category."""
     categories = {
-        "TODO": ["TODO", "FIX", "HACK", "WARN", "PERF", "NOTE", "TEST", "DEPRECATED"],
+        "todo": ["TODO", "FIX", "HACK", "WARN", "PERF", "NOTE", "TEST", "DEPRECATED"],
         "commit": [
             "feat",
             "fix",
@@ -77,7 +77,7 @@ def list(category):
             "ci",
             "revert",
         ],
-        "HTTP": [
+        "http": [
             "200",
             "201",
             "202",
@@ -112,7 +112,7 @@ def list(category):
         ],
         "log": ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"],
     }
-    category = category.upper()
+    category = category.lower()
     terms = categories.get(category, [])
     if not terms:
         console.print(f"No category found for '{category}'", style="bold red")
@@ -125,7 +125,8 @@ def list(category):
         if isinstance(definition, dict) and "alt" in definition:
             all_terms.extend(definition["alt"])
 
-    for term in all_terms:
+    unique_terms = set(all_terms)
+    for term in unique_terms:
         definition = glossary.get(term, {})
         formatted_text = format_term(term, definition)
         console.print(formatted_text)
@@ -144,12 +145,6 @@ def show(term):
 
 
 @cli.command()
-def help():
-    """Show the help menu."""
-    console.print(Markdown(help_content))
-
-
-@cli.command()
 def categories():
     """List all available categories."""
     category_list = [
@@ -162,6 +157,12 @@ def categories():
     console.print(Markdown("## Available Categories"))
     for category in category_list:
         console.print(Markdown(f"- **{category}**"))
+
+
+@cli.command()
+def help():
+    """Show the help menu."""
+    console.print(Markdown(help_content))
 
 
 if __name__ == "__main__":
