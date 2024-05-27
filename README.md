@@ -78,7 +78,7 @@ gloss help
 ## Categories
 
 - **TODO**: Task annotations such as TODO, FIXME, HACK
-- **commit**: Commit message types such as feat, fix, docs
+- **commits**: Commit message types such as feat, fix, docs
 - **HTTP**: HTTP status codes such as 200, 404, 500
 - **errors**: Common error types such as SyntaxError, TypeError
 - **log**: Log levels such as DEBUG, INFO, WARN, ERROR, FATAL
@@ -130,8 +130,7 @@ Josh Peterson - [joshuadanpeterson@gmail.com](mailto:joshuadanpeterson@gmail.com
 
 Your project directory should look like this:
 
-````
-
+```
 my-project/
 ├── gloss-env/
 ├── glossary/
@@ -146,4 +145,4 @@ my-project/
 
 ```
 
-```
+````
