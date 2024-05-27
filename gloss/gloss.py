@@ -23,7 +23,6 @@ def format_term(term, definition):
         icon = emoji.emojize(definition.get("icon", ""))
         color = definition.get("color", "white")
         description = definition.get("description", "")
-        alt = ", ".join(definition.get("alt", []))
     else:
         icon = ""
         color = "white"
@@ -33,9 +32,8 @@ def format_term(term, definition):
     term_text = Text(term, style=color)
     icon_text = Text(icon)
     description_text = Text(description)
-    alt_text = Text(f" (also: {alt})") if alt else Text("")
 
-    return Text.assemble(icon_text, " ", term_text, ": ", description_text, alt_text)
+    return Text.assemble(icon_text, " ", term_text, ": ", description_text)
 
 
 @click.group(context_settings=dict(help_option_names=["-h", "--help"]))
@@ -78,6 +76,8 @@ def list(category):
             "revert",
         ],
         "http": [
+            "100",
+            "101",
             "200",
             "201",
             "202",
