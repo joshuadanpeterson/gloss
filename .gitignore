@@ -1,3 +1,4 @@
 # Folders
 gloss-env/
 gloss.egg-info/
+gloss/__pycache__/*
