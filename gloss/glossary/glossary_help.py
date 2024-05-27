@@ -10,6 +10,7 @@ help_content = """
   `gloss search [TERM]`    Search for a term in the glossary
   `gloss list [CATEGORY]`  List all terms in a specific category
   `gloss show [TERM]`      Show the definition of a specific term
+  `gloss categories`       List all available categories
 
 ## Categories:
   **TODO**: Task annotations such as :white_check_mark: TODO, :bug: FIX, :zap: HACK
@@ -22,4 +23,5 @@ help_content = """
   `gloss search TODO`
   `gloss list HTTP`
   `gloss show 404`
+  `gloss categories`
 """
