@@ -60,7 +60,7 @@ def list(category):
     """List all terms in a specific category."""
     categories = {
         "todo": ["TODO", "FIX", "HACK", "WARN", "PERF", "NOTE", "TEST", "DEPRECATED"],
-        "commit": [
+        "commits": [
             "feat",
             "fix",
             "docs",
@@ -113,7 +113,7 @@ def list(category):
     }
     category_order = {
         "todo": ["TODO", "NOTE", "TEST", "PERF", "HACK", "FIX", "WARN", "DEPRECATED"],
-        "commit": [
+        "commits": [
             "feat",
             "fix",
             "docs",
