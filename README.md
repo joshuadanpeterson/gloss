@@ -115,16 +115,6 @@ Josh Peterson - [joshuadanpeterson@gmail.com](mailto:joshuadanpeterson@gmail.com
 
 [https://github.com/joshuadanpeterson/gloss](https://github.com/joshuadanpeterson/gloss)
 
-### Steps to Create the README
-
-1. **Create the `README.md` file** in the root of your project directory:
-
-   ```sh
-   touch README.md
-   ```
-
-2. **Copy and paste the content** above into the `README.md` file.
-
 ### Final Directory Structure
 
 Your project directory should look like this:
