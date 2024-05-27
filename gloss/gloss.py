@@ -27,7 +27,6 @@ def format_term(term, definition):
         icon = ""
         color = "white"
         description = definition
-        alt = ""
 
     term_text = Text(term, style=color)
     icon_text = Text(icon)
@@ -112,21 +111,68 @@ def list(category):
         ],
         "log": ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"],
     }
+    category_order = {
+        "todo": ["TODO", "NOTE", "TEST", "PERF", "HACK", "FIX", "WARN", "DEPRECATED"],
+        "commit": [
+            "feat",
+            "fix",
+            "docs",
+            "style",
+            "refactor",
+            "perf",
+            "test",
+            "chore",
+            "improvement",
+            "build",
+            "ci",
+            "revert",
+        ],
+        "http": [
+            "100",
+            "101",
+            "200",
+            "201",
+            "202",
+            "204",
+            "301",
+            "302",
+            "304",
+            "400",
+            "401",
+            "403",
+            "404",
+            "405",
+            "500",
+            "501",
+            "502",
+            "503",
+            "504",
+            "505",
+            "506",
+            "507",
+            "508",
+            "510",
+            "511",
+        ],
+        "errors": [
+            "SyntaxError",
+            "TypeError",
+            "ReferenceError",
+            "RangeError",
+            "IOError",
+            "TimeoutError",
+        ],
+        "log": ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"],
+    }
     category = category.lower()
     terms = categories.get(category, [])
     if not terms:
         console.print(f"No category found for '{category}'", style="bold red")
         return
 
-    all_terms = []
-    for term in terms:
-        definition = glossary.get(term, {})
-        all_terms.append(term)
-        if isinstance(definition, dict) and "alt" in definition:
-            all_terms.extend(definition["alt"])
+    ordered_terms = sorted(terms, key=lambda term: category_order[category].index(term))
 
-    unique_terms = set(all_terms)
-    for term in unique_terms:
+    for term in ordered_terms:
         definition = glossary.get(term, {})
         formatted_text = format_term(term, definition)
         console.print(formatted_text)
