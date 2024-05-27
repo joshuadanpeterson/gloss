@@ -12,8 +12,8 @@ from rich.console import Console
 from rich.markdown import Markdown
 from rich.text import Text
 import emoji
-from glossary.glossary_data import glossary
-from glossary.glossary_help import help_content
+from .glossary.glossary_data import glossary
+from .glossary.glossary_help import help_content
 
 console = Console()
 
