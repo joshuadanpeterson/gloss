@@ -1,0 +1,2 @@
+# Include non-script files in a package
+include README.md
