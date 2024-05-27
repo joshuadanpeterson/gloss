@@ -32,7 +32,7 @@ def format_term(term, definition):
     return Text.assemble(icon_text, " ", term_text, ": ", description_text, alt_text)
 
 
-@click.group()
+@click.group(context_settings=dict(help_option_names=["-h", "--help"]))
 def cli():
     pass
 
