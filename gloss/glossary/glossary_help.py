@@ -9,7 +9,6 @@ help_content = """
 ## Usage:
   `gloss search [TERM]`    Search for a term in the glossary
   `gloss list [CATEGORY]`  List all terms in a specific category
-  `gloss show [TERM]`      Show the definition of a specific term
   `gloss categories`       List all available categories
 
 ## Categories:
@@ -22,6 +21,5 @@ help_content = """
 ## Examples:
   `gloss search TODO`
   `gloss list HTTP`
-  `gloss show 404`
   `gloss categories`
 """
