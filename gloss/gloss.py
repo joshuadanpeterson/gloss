@@ -56,19 +56,6 @@ def search(term):
 
 
 @cli.command()
-@click.argument("term")
-def show(term):
-    """Show the definition of a specific term."""
-    term = term.upper()
-    definition = glossary.get(term, "Term not found.")
-    if definition == "Term not found.":
-        console.print(definition, style="bold red")
-    else:
-        formatted_text = format_term(term, definition)
-        console.print(formatted_text)
-
-
-@cli.command()
 @click.argument("category")
 def list(category):
     """List all terms in a specific category."""
@@ -197,8 +184,8 @@ def categories():
     """List all available categories."""
     table = Table(title="Available Categories")
 
-    table.add_column("Category", justify="left", style="bold blue")
-    table.add_column("Description", justify="left", style="bold")
+    table.add_column("Category", justify="left", style="bold cyan")
+    table.add_column("Description", justify="left", style="bold green")
 
     category_list = [
         ("TODO", "Task annotations such as TODO, FIXME, HACK"),
