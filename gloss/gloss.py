@@ -43,7 +43,7 @@ def cli():
 @cli.command()
 @click.argument("term")
 def search(term):
-    """Search for a term in the glossary."""
+    """Search for terms containing the specified keyword in the glossary."""
     result = {
         key: value for key, value in glossary.items() if term.lower() in key.lower()
     }
