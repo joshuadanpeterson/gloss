@@ -4,6 +4,9 @@ gloss.egg-info/
 gloss/__pycache__/*
 gloss/glossary/__pycache__/*
 
+# Files
+TODO.md
+
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
