@@ -4,6 +4,7 @@ This contains a dictionary of terms and their descriptions.
 """
 
 glossary = {
+    # TODOs
     "FIX": {
         "description": "Bug that needs to be fixed. (See also FIXME, BUG, FIXIT, ISSUE)",
         "icon": "🐛",
@@ -45,6 +46,7 @@ glossary = {
         "icon": "⚠️",
         "color": "#808080",  # grey
     },
+    # Commits
     "feat": {
         "description": "A new feature.",
         "icon": "✨",
@@ -105,6 +107,7 @@ glossary = {
         "icon": "⏪",
         "color": "#00FFFF",  # cyan
     },
+    # HTTP Status Codes
     "100": {
         "description": "Continue: The server has received the request headers and the client should proceed to send the request body.",
         "color": "#ADD8E6",  # light blue
@@ -161,6 +164,11 @@ glossary = {
         "description": "Method Not Allowed: The request method is known by the server but has been disabled and cannot be used.",
         "color": "#FFA500",  # orange
     },
+    "429": {
+        "description": "Too Many Requests: The user has sent too many requests in a given amount of time (rate limiting).",
+        "icon": "🚦",
+        "color": "#FF4500",  # OrangeRed
+    },
     "500": {
         "description": "Internal Server Error: The server encountered an unexpected condition.",
         "color": "#FF0000",  # red
@@ -205,6 +213,7 @@ glossary = {
         "description": "Network Authentication Required: The client needs to authenticate to gain network access.",
         "color": "#FF0000",  # red
     },
+    # Log Levels
     "INFO": {
         "description": "Informational messages that highlight the progress of the application.",
         "icon": "ℹ️",
@@ -225,29 +234,106 @@ glossary = {
         "icon": "💀",
         "color": "#FF0000",  # red
     },
-    "SyntaxError": {
-        "description": "Raised when the parser encounters a syntax error.",
-        "color": "#FF0000",  # red
+    # Errors
+    "AssertionError": {
+        "description": "Raised when an assert statement fails.",
+        "icon": "❗",
+        "color": "#FF4500",  # OrangeRed
     },
-    "TypeError": {
-        "description": "Raised when an operation or function is applied to an object of inappropriate type.",
-        "color": "#FFA500",  # orange
+    "AttributeError": {
+        "description": "Raised when an attribute reference or assignment fails.",
+        "icon": "🔍",
+        "color": "#FF4500",  # OrangeRed
     },
-    "ReferenceError": {
-        "description": "Raised when a weak reference proxy is used to access a garbage collected referent.",
-        "color": "#FFA500",  # orange
+    "EOFError": {
+        "description": "Raised when the input() function hits an end-of-file condition (EOF) without reading any data.",
+        "icon": "📄",
+        "color": "#FF4500",  # OrangeRed
     },
-    "RangeError": {
-        "description": "Raised when a numeric value is out of range.",
-        "color": "#FFA500",  # orange
+    "FloatingPointError": {
+        "description": "Raised when a floating point operation fails.",
+        "icon": "🔢",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "ImportError": {
+        "description": "Raised when an import statement has trouble trying to load a module.",
+        "icon": "📦",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "IndentationError": {
+        "description": "Raised when the parser encounters an indentation error.",
+        "icon": "🖋️",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "IndexError": {
+        "description": "Raised when a sequence subscript is out of range.",
+        "icon": "🔢",
+        "color": "#FF4500",  # OrangeRed
     },
     "IOError": {
         "description": "Raised when an I/O operation fails.",
-        "color": "#FFA500",  # orange
+        "icon": "📄",
+        "color": "#FFA500",  # Orange
+    },
+    "KeyError": {
+        "description": "Raised when a dictionary key is not found.",
+        "icon": "🔑",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "MemoryError": {
+        "description": "Raised when an operation runs out of memory.",
+        "icon": "💾",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "NameError": {
+        "description": "Raised when a local or global name is not found.",
+        "icon": "📛",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "OverflowError": {
+        "description": "Raised when the result of an arithmetic operation is too large to be represented.",
+        "icon": "🔢",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "RangeError": {
+        "description": "Raised when a numeric value is out of range.",
+        "icon": "📈",
+        "color": "#FFA500",  # Orange
+    },
+    "ReferenceError": {
+        "description": "Raised when a weak reference proxy is used to access a garbage collected referent.",
+        "icon": "🔗",
+        "color": "#FFA500",  # Orange
+    },
+    "RuntimeError": {
+        "description": "Raised when an error is detected that doesn’t fall in any of the other categories.",
+        "icon": "⚙️",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "SyntaxError": {
+        "description": "Raised when the parser encounters a syntax error.",
+        "icon": "🖋️",
+        "color": "#FF0000",  # Red
     },
     "TimeoutError": {
         "description": "Raised when a system function timed out at the system level.",
-        "color": "#FFA500",  # orange
+        "icon": "⏳",
+        "color": "#FFA500",  # Orange
+    },
+    "TypeError": {
+        "description": "Raised when an operation or function is applied to an object of inappropriate type.",
+        "icon": "📐",
+        "color": "#FFA500",  # Orange
+    },
+    "ValueError": {
+        "description": "Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value.",
+        "icon": "🔢",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "ZeroDivisionError": {
+        "description": "Raised when the second argument of a division or modulo operation is zero.",
+        "icon": "➗",
+        "color": "#FF4500",  # OrangeRed
     },
     # Database
     "SELECT": {
