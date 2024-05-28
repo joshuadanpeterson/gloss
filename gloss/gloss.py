@@ -11,6 +11,7 @@ import click
 from rich.console import Console
 from rich.markdown import Markdown
 from rich.text import Text
+from rich.table import Table
 import emoji
 from .glossary.glossary_data import glossary
 from .glossary.glossary_help import help_content
@@ -55,12 +56,25 @@ def search(term):
 
 
 @cli.command()
+@click.argument("term")
+def show(term):
+    """Show the definition of a specific term."""
+    term = term.upper()
+    definition = glossary.get(term, "Term not found.")
+    if definition == "Term not found.":
+        console.print(definition, style="bold red")
+    else:
+        formatted_text = format_term(term, definition)
+        console.print(formatted_text)
+
+
+@cli.command()
 @click.argument("category")
 def list(category):
     """List all terms in a specific category."""
     categories = {
         "todo": ["TODO", "FIX", "HACK", "WARN", "PERF", "NOTE", "TEST", "DEPRECATED"],
-        "commits": [
+        "commit": [
             "feat",
             "fix",
             "docs",
@@ -113,7 +127,7 @@ def list(category):
     }
     category_order = {
         "todo": ["TODO", "NOTE", "TEST", "PERF", "HACK", "FIX", "WARN", "DEPRECATED"],
-        "commits": [
+        "commit": [
             "feat",
             "fix",
             "docs",
@@ -179,30 +193,28 @@ def list(category):
 
 
 @cli.command()
-@click.argument("term")
-def show(term):
-    """Show the definition of a specific term."""
-    definition = glossary.get(term.upper(), "Term not found.")
-    if definition == "Term not found.":
-        console.print(definition, style="bold red")
-    else:
-        formatted_text = format_term(term.upper(), definition)
-        console.print(formatted_text)
-
-
-@cli.command()
 def categories():
     """List all available categories."""
+    table = Table(title="Available Categories")
+
+    table.add_column("Category", justify="left", style="bold blue")
+    table.add_column("Description", justify="left", style="bold")
+
     category_list = [
-        "TODO: Task annotations such as TODO, FIXME, HACK",
-        "commit: Commit message types such as feat, fix, docs, improvement, build, ci, revert",
-        "HTTP: HTTP status codes such as 200, 201, 400, 404, 500",
-        "errors: Common error types such as SyntaxError, TypeError",
-        "log: Log levels such as DEBUG, INFO, WARN, ERROR, FATAL",
+        ("TODO", "Task annotations such as TODO, FIXME, HACK"),
+        (
+            "commit",
+            "Commit message types such as feat, fix, docs, improvement, build, ci, revert",
+        ),
+        ("HTTP", "HTTP status codes such as 200, 201, 400, 404, 500"),
+        ("errors", "Common error types such as SyntaxError, TypeError"),
+        ("log", "Log levels such as DEBUG, INFO, WARN, ERROR, FATAL"),
     ]
-    console.print(Markdown("## Available Categories"))
-    for category in category_list:
-        console.print(Markdown(f"- **{category}**"))
+
+    for category, description in category_list:
+        table.add_row(category, description)
+
+    console.print(table)
 
 
 @cli.command()
