@@ -791,4 +791,86 @@ glossary = {
         "icon": "❌",
         "color": "#FF4500",  # OrangeRed
     },
+    # Google Apps Script Errors
+    "TypeError: Cannot read property 'X' of undefined": {
+        "description": "Occurs when trying to access a property of an undefined object.",
+        "icon": "❓",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "ReferenceError: X is not defined": {
+        "description": "Occurs when a variable is referenced that has not been declared.",
+        "icon": "📛",
+        "color": "#FFA500",  # Orange
+    },
+    "SyntaxError: Unexpected token X": {
+        "description": "Occurs when there is a syntax error in the code, such as a missing comma or parenthesis.",
+        "icon": "🖋️",
+        "color": "#FF0000",  # Red
+    },
+    "QuotaExceededError: Script has exceeded the maximum execution time": {
+        "description": "Occurs when a script runs longer than the maximum allowed execution time.",
+        "icon": "⏳",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "RangeError: Maximum call stack size exceeded": {
+        "description": "Occurs when there is a stack overflow due to excessive recursion.",
+        "icon": "🔢",
+        "color": "#FFA500",  # Orange
+    },
+    "Exception: Service invoked too many times in a short time: X": {
+        "description": "Occurs when a service (e.g., SpreadsheetApp, GmailApp) is called too frequently.",
+        "icon": "🔄",
+        "color": "#FF4500",  # OrangeRed
+    },
+    "Exception: Cannot call method 'X' of null": {
+        "description": "Occurs when attempting to call a method on a null object.",
+        "icon": "❌",
+        "color": "#FF4500",  # OrangeRed
+    },
+    # GitHub Labels
+    "bug": {
+        "description": "Indicates an unexpected problem or unintended behavior.",
+        "icon": "🐛",
+        "color": "#d73a4a",  # Red
+    },
+    "documentation": {
+        "description": "Improvements or additions to documentation.",
+        "icon": "📚",
+        "color": "#0075ca",  # Blue
+    },
+    "duplicate": {
+        "description": "Indicates similar issues or pull requests.",
+        "icon": "➕",
+        "color": "#cfd3d7",  # Light Gray
+    },
+    "enhancement": {
+        "description": "New feature or request.",
+        "icon": "✨",
+        "color": "#a2eeef",  # Light Blue
+    },
+    "good first issue": {
+        "description": "Good for newcomers.",
+        "icon": "👶",
+        "color": "#7057ff",  # Purple
+    },
+    "help wanted": {
+        "description": "Extra attention is needed.",
+        "icon": "🙏",
+        "color": "#008672",  # Green
+    },
+    "invalid": {
+        "description": "This doesn't seem right.",
+        "icon": "❓",
+        "color": "#e4e669",  # Yellow
+    },
+    "question": {
+        "description": "Further information is requested.",
+        "icon": "❓",
+        "color": "#d876e3",  # Light Purple
+    },
+    "wontfix": {
+        "description": "This will not be worked on.",
+        "icon": "🚫",
+        "color": "#ffffff",  # White
+    },
 }
