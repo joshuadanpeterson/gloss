@@ -1,5 +1,11 @@
 # Gloss
 
+<div>
+  <a href="https://deepwiki.com/joshuadanpeterson/gloss">
+    <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
+  </a>
+</div>
+
 ### Currently in development
 
 Gloss is a Command Line Interface (CLI) tool that acts as a glossary for developers. It helps you quickly look up definitions for various programming terms, HTTP status codes, log levels, and more.
